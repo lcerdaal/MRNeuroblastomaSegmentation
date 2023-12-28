@@ -1,2 +1,2 @@
-# MRNeuroblastomaSegmentation
-Automatic segmentation of neuroblastoma in MR images
+# MR Neuroblastoma Segmentation
+This is an automatic segmentation tool of neuroblastoma tumors in MR images
