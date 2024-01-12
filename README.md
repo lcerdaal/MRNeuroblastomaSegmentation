@@ -2,18 +2,6 @@
 
 This code implements a workflow for the automatic segmentation Neuroblastic tumor in T2-weighted magnetic resonance images.
 
-##  Prerequisites
-Before running the nnUNet Segmentation Pipeline, ensure that you have the necessary prerequisites in place. 
-
-### Download Model Folder:
-
-Visit https://iislafe.sharepoint.com/sites/GIBI230_PUBLIC_REPOSITORY/Documentos%20compartidos/Forms/AllItems.aspx .
-Download the model folder related to the Neuroblastic tumor segmentation task.
-
-### Copy Model Folder to Project Directory
-
-After downloading the model folder, copy it to the directory where the Dockerfile is located.
-
 ### Usage
 
 This code runs through a Docker image. To build the image, it's necessary to mount a `/data` volume containing the Database (BBDD) folder  with input images.
