@@ -1,9 +1,5 @@
 FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
 
-ENV http_proxy "http://proxy.san.gva.es:8080"
-ENV https_proxy "http://proxy.san.gva.es:8080"
-ENV no_proxy "127.0.0.1,localhost"
-
 RUN mkdir /app
 
 WORKDIR /app
@@ -32,13 +28,9 @@ RUN wget -P /app https://iislafe.sharepoint.com/:u:/s/GIBI230_PUBLIC_REPOSITORY/
 RUN chmod -R 777 /app
 RUN unzip /app/EXh59Raj7adNpkuH7RX7XB4BYtmJCsxECbweF0N0QIj_8Q\?download\=1  -d /mnt/nnUNet_raw_data_base/nnUNet_trained_models/nnUNet
 
-#COPY nnUNet /mnt/nnUNet_raw_data_base/nnUNet_trained_models/nnUNet
-
 ENV nnUNet_preprocessed=/mnt/nnUNet_raw_data_base/nnUNet_preprocessed
 ENV nnUNet_raw_data_base=/mnt/nnUNet_raw_data_base
 ENV RESULTS_FOLDER=/mnt/nnUNet_raw_data_base/nnUNet_trained_models
-
-ENV APP nnunet_nb_segmentation
 
 WORKDIR /module
 
